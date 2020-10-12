@@ -78,7 +78,7 @@
 
             <div class="table-area">
                 <div class="row">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center table-responsive">
                         <table class="table table-borderless table-striped table-hover">
                             <tr>
                                 <th>Strategy</th>
@@ -91,10 +91,10 @@
                             <tr>
                                 <td>MovingAverageVault</td>
                                 <td>$ 0</td>
-                                <td>$ 20,000</td>
+                                <td>$ 2,000</td>
                                 <td>$ 0</td>
                                 <td>0 %</td>
-                                <td>0 %</td>
+                                <td>10 %</td>
                             </tr>
                         </table>
                     </div>
@@ -104,23 +104,27 @@
             <!-- // progress-area -->
 
             <div class="row text-right">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-auto">
                     <h6 class="text-info">
                         Your Wallet: 1000 USDT
                     </h6>
-                    <form class="form-control">
-                        <input id="amount" placeholder="0.00" type="text" class="input-group" value="">
-                      <button type="submit" class="btn btn-primary">Deposit</button>
-                    </form>
+                    <div class="pb-4">
+                        <form class="form-control-plaintext">
+                            <input id="amount" placeholder="0.00" type="text" class="input-group" value="">
+                            <button type="submit" class="btn btn-primary">Deposit</button>
+                        </form>                        
+                    </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-auto mt-auto">
                     <h6 class="text-info">
-                        Withdraw: 0 USDT (~ 0 ETH)
+                        Withdraw: 2070 USDT (~ 0 ETH)
                     </h6>
-                    <form class="form-control">
-                        <input id="amount" placeholder="0.00" type="text" class="input-group" value="">
-                      <button type="submit" class="btn btn-primary">Withdraw</button>
-                    </form>
+                    <div class="pb-4">
+                        <form class="form-control-plaintext">
+                            <input id="amount" placeholder="0.00" type="text" class="input-group" value="2070">
+                          <button type="submit" class="btn btn-primary">Withdraw (Exit Pool)</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <!-- // row -->
