@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <title>mEth</title>
+    <!-- OpenGraph SEO meta tags -->
+    <meta content="" name="description">
+    <meta content=""
+        name="keywords">
+    <meta content="images/banner.jpg" property="og:image">
+    <meta content="" property="og:title">
+    <meta content="website" property="og:type">
+    <!-- Google Font -->
+    <link href="css/font.css" rel="stylesheet">
+    <!-- Plugins -->
+    <link rel="stylesheet" href="css/flipclock.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body class="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <!-- <img src="images/coindash-logo.svg" alt="logo"> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stake.html">Stake</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vision.html">Vision-Mission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-secondary" href="#">Connect Wallet</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section section-highlight">
+        <div class="container">
+            <div class="section-title max-title">
+                <h3>Pool T0006 ETH / USDT</h3>
+            </div>
+            <p class="lead p-3 centered-text text-center mx-auto">Total Locked Value $ 20,000 / 25,000</p>
+
+            <div class="table-area">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <table class="table table-borderless table-striped table-hover">
+                            <tr>
+                                <th>Strategy</th>
+                                <th>Total Earnings</th>
+                                <th>Total Deposit</th>
+                                <th>Total Withdrawal</th>
+                                <th>Weekly Growth</th>
+                                <th>Monthly Growth</th>
+                            </tr>
+                            <tr>
+                                <td>MovingAverageVault</td>
+                                <td>$ 0</td>
+                                <td>$ 20,000</td>
+                                <td>$ 0</td>
+                                <td>0 %</td>
+                                <td>0 %</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- // progress-area -->
+
+            <div class="row text-right">
+                <div class="col-md-6">
+                    <h6 class="text-info">
+                        Your Wallet: 1000 USDT
+                    </h6>
+                    <form class="form-control">
+                        <input id="amount" placeholder="0.00" type="text" class="input-group" value="">
+                      <button type="submit" class="btn btn-primary">Deposit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="text-info">
+                        Withdraw: 0 USDT (~ 0 ETH)
+                    </h6>
+                    <form class="form-control">
+                        <input id="amount" placeholder="0.00" type="text" class="input-group" value="">
+                      <button type="submit" class="btn btn-primary">Withdraw</button>
+                    </form>
+                </div>
+            </div>
+            <!-- // row -->
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Breakdown</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="section-title mini-title left-aligned">
+                                <h4>Token Distribution</h4>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center my-5 mb-md-0">
+                                <div class="flex-fill flex-shrink-1 w-50">
+                                    <canvas id="distChart" class="donut-chart"></canvas>
+                                </div>
+                                <div id="dist_legend" class="flex-fill w-50 flex-grow-1 donut-legend"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="section-title mini-title left-aligned">
+                                <h4>Allocation of Trading Yield</h4>
+                            </div>
+
+                            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center my-5 mb-md-0">
+                                <div class="flex-fill flex-shrink-1 w-50">
+                                    <canvas id="alloChart" class="donut-chart"></canvas>
+                                </div>
+                                <div id="allo_legend" class="flex-fill w-50 flex-grow-1 donut-legend"></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+            <!-- // row -->
+
+        </div>
+        <!-- // container -->
+    </section>
+    <!-- // section -->
+
+    <footer class="section section-separated py-lg">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="images/footer_logo.svg" alt="footer logo" class="img-fluid mb-4"> -->
+
+                    <ul class="social__links">
+                        <li>
+                            <a href="#">
+                                <img src="images/facebook-icon.svg" alt="fb" class="img-fluid">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/twitter-icon.svg" alt="tw" class="img-fluid">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/linked-in-icon.svg" alt="in" class="img-fluid">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/github-icon.svg" alt="gh" class="img-fluid">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="footer-col__head">Contact Us</p>
+
+                    <div class="contact__address">
+                        <p> Email: info@coin.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p class="footer-col__head">Quick Links</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#">Token Contracts</a>
+                                </li>
+                                <li>
+                                    <a href="#">Referrals</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trading Contracts</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vision-Mission</a>
+                                </li>
+                                <li>
+                                    <a href="#">WHITEPAPER</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#">TERMS OF USE</a>
+                                </li>
+                                <li>
+                                    <a href="#">PRIVACY POLICY</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="copyright__text mb-0"><small>Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>. All rights reserved.</small></p>
+            </div>
+        </div>
+        <!-- // container -->
+    </footer>
+    <!-- // section -->
+
+
+    <!-- JavaScript -->
+    <!-- jQuery & Bootstrap -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JS -->
+    <script src="js/plugins/flipclock.min.js"></script>
+    <script src="js/plugins/chart.min.js"></script>
+    <script src="js/plugins/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
